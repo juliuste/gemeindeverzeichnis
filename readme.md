@@ -1,5 +1,7 @@
 # gemeindeverzeichnis
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/juliuste/gemeindeverzeichnis.svg)](https://greenkeeper.io/)
+
 German „Gemeindeverzeichnis“ (vaguely "community register") containing all federal entities based on [this dataset](https://www.govdata.de/web/guest/daten/-/details/gv100_quartalsausgabe) fortunately provided by the [„Statistisches Bundesamt“](https://www.destatis.de).
 
 [![npm version](https://img.shields.io/npm/v/gemeindeverzeichnis.svg)](https://www.npmjs.com/package/gemeindeverzeichnis)
