@@ -2,6 +2,12 @@
 
 German „Gemeindeverzeichnis“ (vaguely "community register") containing all federal entities based on [this dataset](https://www.govdata.de/web/guest/daten/-/details/gv100_quartalsausgabe) fortunately provided by the [„Statistisches Bundesamt“](https://www.destatis.de).
 
+[![npm version](https://img.shields.io/npm/v/gemeindeverzeichnis.svg)](https://www.npmjs.com/package/gemeindeverzeichnis)
+[![Build Status](https://travis-ci.org/juliuste/gemeindeverzeichnis.svg?branch=master)](https://travis-ci.org/juliuste/gemeindeverzeichnis)
+[![dependency status](https://img.shields.io/david/juliuste/gemeindeverzeichnis.svg)](https://david-dm.org/juliuste/gemeindeverzeichnis)
+[![dev dependency status](https://img.shields.io/david/dev/juliuste/gemeindeverzeichnis.svg)](https://david-dm.org/juliuste/gemeindeverzeichnis#info=devDependencies)
+[![license](https://img.shields.io/github/license/juliuste/gemeindeverzeichnis.svg?style=flat)](LICENSE)
+
 ## Installation
 
 ```bash
@@ -210,13 +216,6 @@ The returned `object`s can be of the following types:
 ## Build
 
 The module contains a dataset as of `03/17/2017`. To re-generate the dataset or to generate a newer version of it, just move the `.asc` file you downloaded from the [data portal](https://www.govdata.de/web/guest/daten/-/details/gv100_quartalsausgabe) to `build/data.asc` and run `npm run build` in the project root.
-
-
-[![npm version](https://img.shields.io/npm/v/gemeindeverzeichnis.svg)](https://www.npmjs.com/package/gemeindeverzeichnis)
-[![Build Status](https://travis-ci.org/juliuste/gemeindeverzeichnis.svg?branch=master)](https://travis-ci.org/juliuste/gemeindeverzeichnis)
-[![dependency status](https://img.shields.io/david/juliuste/gemeindeverzeichnis.svg)](https://david-dm.org/juliuste/gemeindeverzeichnis)
-[![dev dependency status](https://img.shields.io/david/dev/juliuste/gemeindeverzeichnis.svg)](https://david-dm.org/juliuste/gemeindeverzeichnis#info=devDependencies)
-[![license](https://img.shields.io/github/license/juliuste/gemeindeverzeichnis.svg?style=flat)](LICENSE)
 
 ## Contributing
 
