@@ -24,7 +24,7 @@
   "main": "index.js",
   "files": [
     "index.js",
-    "data.json"
+    "data.ndjson"
   ],
   "dependencies": {
     "ndjson": "^1.5.0"
@@ -40,7 +40,7 @@
   "scripts": {
     "test": "node test.js",
     "prepublish": "npm test",
-    "build": "node build/index > data.json"
+    "build": "node build/index > data.ndjson"
   },
   "engines": {
     "node": ">=6"
