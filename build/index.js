@@ -1,5 +1,6 @@
 'use strict'
 
+const pump = require('pump')
 const fs = require('fs')
 const byLine = require('byline')
 const Iconv = require('iconv').Iconv
@@ -16,13 +17,20 @@ const parseLine = (line) => {
 	return parseType(line.toString(), type)
 }
 
-const parse = (file) => {
-	return fs.createReadStream(file)
-	.pipe(converter)
-	.pipe(byLine.createStream())
-	.pipe(map(parseLine))
-	.pipe(ndjson.stringify())
-	.pipe(process.stdout)
+const showError = (err) => {
+	if (!err) return
+	console.error(err)
+	process.exit(1)
 }
 
-parse(path.join(__dirname, './data/GV100AD_310317.ASC'))
+const src = path.join(__dirname, './data/GV100AD_310317.ASC')
+
+pump(
+	fs.createReadStream(src),
+	converter,
+	byLine.createStream(),
+	map(parseLine),
+	ndjson.stringify(),
+	process.stdout,
+	showError
+)
