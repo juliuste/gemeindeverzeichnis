@@ -6,6 +6,7 @@ German „Gemeindeverzeichnis“ (vaguely "community register") containing all f
 [![Build Status](https://travis-ci.org/juliuste/gemeindeverzeichnis.svg?branch=master)](https://travis-ci.org/juliuste/gemeindeverzeichnis)
 [![dependency status](https://img.shields.io/david/juliuste/gemeindeverzeichnis.svg)](https://david-dm.org/juliuste/gemeindeverzeichnis)
 [![dev dependency status](https://img.shields.io/david/dev/juliuste/gemeindeverzeichnis.svg)](https://david-dm.org/juliuste/gemeindeverzeichnis#info=devDependencies)
+[![Greenkeeper badge](https://badges.greenkeeper.io/juliuste/gemeindeverzeichnis.svg)](https://greenkeeper.io/)
 [![license](https://img.shields.io/github/license/juliuste/gemeindeverzeichnis.svg?style=flat)](LICENSE)
 
 ## Installation
