@@ -4,7 +4,7 @@ const fs = require('fs')
 const ndjson = require('ndjson')
 
 const gemeindeverzeichnis = () => 
-	fs.createReadStream('data.json')
+	fs.createReadStream('data.ndjson')
 	.pipe(ndjson.parse())
 
 module.exports = gemeindeverzeichnis

@@ -24,7 +24,7 @@
   "main": "index.js",
   "files": [
     "index.js",
-    "data.json"
+    "data.ndjson"
   ],
   "dependencies": {
     "ndjson": "^1.5.0"
@@ -43,7 +43,7 @@
     "prepublish": "npm test",
     "download": "./build/download.js",
     "unzip": "unzip -o -j build/data.zip -d build/data",
-    "convert": "node build/index > data.json",
+    "convert": "node build/index.js > data.ndjson",
     "cleanup": "rm build/data.zip; rm build/data/*; exit 0",
     "build": "npm run download && npm run unzip && npm run convert && npm run cleanup"
   },
