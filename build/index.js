@@ -5,6 +5,7 @@ const byLine = require('byline')
 const Iconv = require('iconv').Iconv
 const map = require('through2-map').obj
 const ndjson = require('ndjson')
+const path = require('path')
 
 const parseType = require('./parseType')
 
@@ -24,4 +25,4 @@ const parse = (file) => {
 	.pipe(process.stdout)
 }
 
-parse('./build/data.asc')
+parse(path.join(__dirname, './data/GV100AD_310317.ASC'))

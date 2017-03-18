@@ -31,6 +31,7 @@
   },
   "devDependencies": {
     "byline": "^5.0.0",
+    "got": "^6.7.1",
     "iconv": "^2.2.1",
     "isstream": "^0.1.2",
     "moment-timezone": "^0.5.11",
@@ -40,7 +41,11 @@
   "scripts": {
     "test": "node test.js",
     "prepublish": "npm test",
-    "build": "node build/index > data.ndjson"
+    "download": "./build/download.js",
+    "unzip": "unzip -o -j build/data.zip -d build/data",
+    "convert": "node build/index.js > data.ndjson",
+    "cleanup": "rm build/data.zip; rm build/data/*; exit 0",
+    "build": "npm run download && npm run unzip && npm run convert && npm run cleanup"
   },
   "engines": {
     "node": ">=6"
