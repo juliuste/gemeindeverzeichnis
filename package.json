@@ -1,0 +1,49 @@
+{
+  "name": "gemeindeverzeichnis",
+  "description": "German „Gemeindeverzeichnis“ (vaguely 'community register') containing all federal entities",
+  "version": "0.0.0",
+  "keywords": [
+    "germany",
+    "german",
+    "gemeinde",
+    "municipality"
+    "gemeindeverzeichnis",
+    "gemeindeschlüssel",
+    "föderal",
+    "federal",
+    "länder",
+    "bundesländer",
+    "regierungsbezirk",
+    "kreis",
+    "gemeineverband"
+  ],
+  "author": "Julius Tens <mail@juliustens.de>",
+  "homepage": "https://github.com/juliuste/gemeindeverzeichnis",
+  "repository": "juliuste/gemeindeverzeichnis",
+  "bugs": "https://github.com/juliuste/gemeindeverzeichnis/issues",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "data.json"
+  ],
+  "dependencies": {
+    "ndjson": "^1.5.0"
+  },
+  "devDependencies": {
+    "byline": "^5.0.0",
+    "iconv": "^2.2.1",
+    "isstream": "^0.1.2",
+    "moment-timezone": "^0.5.11",
+    "tape": "^4.6.3",
+    "through2-map": "^3.0.0"
+  },
+  "scripts": {
+    "test": "node test.js",
+    "prepublish": "npm test",
+    "build": "node build/index > data.json"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "license": "MIT"
+}
