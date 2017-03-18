@@ -91,6 +91,7 @@ The returned `object`s can be of the following types:
 	 	region: '1'
 	},
 	sitz: 'Stuttgart' // seat of the administration
+}
 ```
 
 ### `kreis`
