@@ -3,7 +3,7 @@
 const fs = require('fs')
 const ndjson = require('ndjson')
 
-const gemeindeverzeichnis = () => 
+const gemeindeverzeichnis = () =>
 	fs.createReadStream('data.ndjson')
 	.pipe(ndjson.parse())
 

@@ -28,6 +28,7 @@ gemeindeverzeichnis()
 ```
 
 The returned `object`s can be of the following types:
+
 - [`land`](#land)
 - [`regierungsbezirk`](#regierungsbezirk)
 - [`region`](#region)
@@ -148,7 +149,7 @@ The returned `object`s can be of the following types:
 	typ: { // type
 		nummer: 50,
 		name: 'verbandsfreie-gemeinde'
-		
+
 		// 50: 'verbandsfreie-gemeinde'
 		// 51: 'amt'
 		// 52: 'samtgemeinde'
@@ -217,7 +218,7 @@ The returned `object`s can be of the following types:
 
 ## Build
 
-The module contains a dataset as of `03/17/2017`. To re-generate the dataset or to generate a newer version of it, just move the `.asc` file you downloaded from the [data portal](https://www.govdata.de/web/guest/daten/-/details/gv100_quartalsausgabe) to `build/data.asc` and run `npm run build` in the project root.
+The module contains a dataset as of `2017-03-18`. To re-generate the dataset or to generate a newer version of it, run `npm run build` in the project root.
 
 ## Contributing
 
