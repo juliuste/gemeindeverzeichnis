@@ -1,0 +1,16 @@
+{"ebene":{"nummer":1,"name":"land"},"name":"Schleswig-Holstein","stand":"2017-03-30T22:00:00.000Z","weiteres":"","schlüssel":{"nummer":"01","land":"01"},"sitz":"Kiel"}
+{"ebene":{"nummer":1,"name":"land"},"name":"Hamburg","stand":"2017-03-30T22:00:00.000Z","weiteres":"","schlüssel":{"nummer":"02","land":"02"},"sitz":"Hamburg"}
+{"ebene":{"nummer":1,"name":"land"},"name":"Niedersachsen","stand":"2017-03-30T22:00:00.000Z","weiteres":"","schlüssel":{"nummer":"03","land":"03"},"sitz":"Hannover"}
+{"ebene":{"nummer":1,"name":"land"},"name":"Bremen","stand":"2017-03-30T22:00:00.000Z","weiteres":"","schlüssel":{"nummer":"04","land":"04"},"sitz":"Bremen"}
+{"ebene":{"nummer":1,"name":"land"},"name":"Nordrhein-Westfalen","stand":"2017-03-30T22:00:00.000Z","weiteres":"","schlüssel":{"nummer":"05","land":"05"},"sitz":"Düsseldorf"}
+{"ebene":{"nummer":1,"name":"land"},"name":"Hessen","stand":"2017-03-30T22:00:00.000Z","weiteres":"","schlüssel":{"nummer":"06","land":"06"},"sitz":"Wiesbaden"}
+{"ebene":{"nummer":1,"name":"land"},"name":"Rheinland-Pfalz","stand":"2017-03-30T22:00:00.000Z","weiteres":"","schlüssel":{"nummer":"07","land":"07"},"sitz":"Mainz"}
+{"ebene":{"nummer":1,"name":"land"},"name":"Baden-Württemberg","stand":"2017-03-30T22:00:00.000Z","weiteres":"","schlüssel":{"nummer":"08","land":"08"},"sitz":"Stuttgart"}
+{"ebene":{"nummer":1,"name":"land"},"name":"Bayern","stand":"2017-03-30T22:00:00.000Z","weiteres":"","schlüssel":{"nummer":"09","land":"09"},"sitz":"München"}
+{"ebene":{"nummer":1,"name":"land"},"name":"Saarland","stand":"2017-03-30T22:00:00.000Z","weiteres":"","schlüssel":{"nummer":"10","land":"10"},"sitz":"Saarbrücken, Landeshauptstadt"}
+{"ebene":{"nummer":1,"name":"land"},"name":"Berlin","stand":"2017-03-30T22:00:00.000Z","weiteres":"","schlüssel":{"nummer":"11","land":"11"},"sitz":"Berlin"}
+{"ebene":{"nummer":1,"name":"land"},"name":"Brandenburg","stand":"2017-03-30T22:00:00.000Z","weiteres":"","schlüssel":{"nummer":"12","land":"12"},"sitz":"Potsdam"}
+{"ebene":{"nummer":1,"name":"land"},"name":"Mecklenburg-Vorpommern","stand":"2017-03-30T22:00:00.000Z","weiteres":"","schlüssel":{"nummer":"13","land":"13"},"sitz":"Schwerin"}
+{"ebene":{"nummer":1,"name":"land"},"name":"Sachsen","stand":"2017-03-30T22:00:00.000Z","weiteres":"","schlüssel":{"nummer":"14","land":"14"},"sitz":"Dresden"}
+{"ebene":{"nummer":1,"name":"land"},"name":"Sachsen-Anhalt","stand":"2017-03-30T22:00:00.000Z","weiteres":"","schlüssel":{"nummer":"15","land":"15"},"sitz":"Magdeburg"}
+{"ebene":{"nummer":1,"name":"land"},"name":"Thüringen","stand":"2017-03-30T22:00:00.000Z","weiteres":"","schlüssel":{"nummer":"16","land":"16"},"sitz":"Erfurt"}
