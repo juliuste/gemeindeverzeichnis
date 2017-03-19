@@ -38,7 +38,7 @@
     "byline": "^5.0.0",
     "got": "^6.7.1",
     "iconv": "^2.2.1",
-    "isstream": "^0.1.2",
+    "is-stream": "^1.1.0",
     "moment-timezone": "^0.5.11",
     "tape": "^4.6.3",
     "through2": "^2.0.3",

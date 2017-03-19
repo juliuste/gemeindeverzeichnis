@@ -1,8 +1,8 @@
 'use strict'
 
 const tape = require('tape')
-const gemeindeverzeichnis = require('./index')
-const isStream = require('isstream')
+const gemeindeverzeichnis = require('.')
+const isStream = require('is-stream')
 const map = require('through2-map').obj
 
 const isLandNRW = (i) => (
@@ -51,7 +51,7 @@ tape('laender()', (t) => {
 	t.plan(2)
 	const s = gemeindeverzeichnis.laender()
 
-	t.ok(isStream(s), 'returns stream')
+	t.ok(isStream.readable(s), 'returns stream')
 	s
 	.on('error', t.fail)
 	.on('data', (item) => {
@@ -64,7 +64,7 @@ tape('regierungsbezirke()', (t) => {
 	t.plan(2)
 	const s = gemeindeverzeichnis.regierungsbezirke()
 
-	t.ok(isStream(s), 'returns stream')
+	t.ok(isStream.readable(s), 'returns stream')
 	s
 	.on('error', t.fail)
 	.on('data', (item) => {
@@ -77,7 +77,7 @@ tape('regionen()', (t) => {
 	t.plan(2)
 	const s = gemeindeverzeichnis.regionen()
 
-	t.ok(isStream(s), 'returns stream')
+	t.ok(isStream.readable(s), 'returns stream')
 	s
 	.on('error', t.fail)
 	.on('data', (item) => {
@@ -90,7 +90,7 @@ tape('kreise()', (t) => {
 	t.plan(2)
 	const s = gemeindeverzeichnis.kreise()
 
-	t.ok(isStream(s), 'returns stream')
+	t.ok(isStream.readable(s), 'returns stream')
 	s
 	.on('error', t.fail)
 	.on('data', (item) => {
@@ -103,7 +103,7 @@ tape('gemeindeverbaende()', (t) => {
 	t.plan(2)
 	const s = gemeindeverzeichnis.gemeindeverbaende()
 
-	t.ok(isStream(s), 'returns stream')
+	t.ok(isStream.readable(s), 'returns stream')
 	s
 	.on('error', t.fail)
 	.on('data', (item) => {
@@ -116,7 +116,7 @@ tape('gemeinden()', (t) => {
 	t.plan(2)
 	const s = gemeindeverzeichnis.gemeinden()
 
-	t.ok(isStream(s), 'returns stream')
+	t.ok(isStream.readable(s), 'returns stream')
 	s
 	.on('error', t.fail)
 	.on('data', (item) => {
