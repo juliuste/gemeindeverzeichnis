@@ -1,8 +1,8 @@
 'use strict'
 
 const tape = require('tape')
-const gemeindeverzeichnis = require('./index')
-const isStream = require('isstream')
+const gemeindeverzeichnis = require('.')
+const isStream = require('is-stream')
 const map = require('through2-map').obj
 
 const isLandNRW = (i) => (
@@ -47,19 +47,98 @@ const isGemeindePrezelle = (i) => (
  && (i.name === 'Prezelle')
 )
 
-tape('gemeindeverzeichnis', (t) => {
+tape('gemeindeverzeichnis()', (t) => {
 	t.plan(7)
+	const s = gemeindeverzeichnis()
 
-	t.ok(isStream(gemeindeverzeichnis()), 'returns stream')
-
-	gemeindeverzeichnis()
+	t.ok(isStream.readable(s), 'returns stream')
+	s
 	.on('error', t.fail)
 	.on('data', (item) => {
 		if(isLandNRW(item)) t.pass('contains land `NRW`')
-		else if(isRegierungsbezirkMuenster(item)) t.pass('contains regierungsbezirk `Münster`')
-		else if(isRegionStuttgart(item)) t.pass('contains region `Stuttgart`')
-		else if(isKreisGelsenkirchen(item)) t.pass('contains kreis `Gelsenkirchen`')
-		else if(isGemeindeverbandMarl(item)) t.pass('contains gemeindeverband `Marl`')
-		else if(isGemeindePrezelle(item)) t.pass('contains gemeinde `Prezelle`')
+		else if(isRegierungsbezirkMuenster(item)) t.pass('contains `Münster`')
+		else if(isRegionStuttgart(item)) t.pass('contains `Stuttgart`')
+		else if(isKreisGelsenkirchen(item)) t.pass('contains `Gelsenkirchen`')
+		else if(isGemeindeverbandMarl(item)) t.pass('contains `Marl`')
+		else if(isGemeindePrezelle(item)) t.pass('contains `Prezelle`')
+		// todo: check if every item is valid
+	})
+})
+
+tape('gemeindeverzeichnis.laender()', (t) => {
+	t.plan(2)
+	const s = gemeindeverzeichnis.laender()
+
+	t.ok(isStream.readable(s), 'returns stream')
+	s
+	.on('error', t.fail)
+	.on('data', (item) => {
+		if(isLandNRW(item)) t.pass('contains land `NRW`')
+		// todo: check if every item is valid
+	})
+})
+
+tape('gemeindeverzeichnis.regierungsbezirke()', (t) => {
+	t.plan(2)
+	const s = gemeindeverzeichnis.regierungsbezirke()
+
+	t.ok(isStream.readable(s), 'returns stream')
+	s
+	.on('error', t.fail)
+	.on('data', (item) => {
+		if(isRegierungsbezirkMuenster(item)) t.pass('contains `Münster`')
+		// todo: check if every item is valid
+	})
+})
+
+tape('gemeindeverzeichnis.regionen()', (t) => {
+	t.plan(2)
+	const s = gemeindeverzeichnis.regionen()
+
+	t.ok(isStream.readable(s), 'returns stream')
+	s
+	.on('error', t.fail)
+	.on('data', (item) => {
+		if(isRegionStuttgart(item)) t.pass('contains `Stuttgart`')
+		// todo: check if every item is valid
+	})
+})
+
+tape('gemeindeverzeichnis.kreise()', (t) => {
+	t.plan(2)
+	const s = gemeindeverzeichnis.kreise()
+
+	t.ok(isStream.readable(s), 'returns stream')
+	s
+	.on('error', t.fail)
+	.on('data', (item) => {
+		if(isKreisGelsenkirchen(item)) t.pass('contains `Gelsenkirchen`')
+		// todo: check if every item is valid
+	})
+})
+
+tape('gemeindeverzeichnis.gemeindeverbaende()', (t) => {
+	t.plan(2)
+	const s = gemeindeverzeichnis.gemeindeverbaende()
+
+	t.ok(isStream.readable(s), 'returns stream')
+	s
+	.on('error', t.fail)
+	.on('data', (item) => {
+		if(isGemeindeverbandMarl(item)) t.pass('contains `Marl`')
+		// todo: check if every item is valid
+	})
+})
+
+tape('gemeindeverzeichnis.gemeinden()', (t) => {
+	t.plan(2)
+	const s = gemeindeverzeichnis.gemeinden()
+
+	t.ok(isStream.readable(s), 'returns stream')
+	s
+	.on('error', t.fail)
+	.on('data', (item) => {
+		if(isGemeindePrezelle(item)) t.pass('contains `Prezelle`')
+		// todo: check if every item is valid
 	})
 })

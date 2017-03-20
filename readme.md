@@ -17,23 +17,24 @@ npm install --save gemeindeverzeichnis
 
 ## Usage
 
-`gemeindeverzeichnis()` returns a [readable stream](https://nodejs.org/api/stream.html#stream_class_stream_readable) in [object mode](https://nodejs.org/api/stream.html#stream_object_mode).
+This module contains the following [ndjson](http://ndjson.org) files:
+
+- `laender.ndjson`: [*Bundesländer*](https://en.wikipedia.org/wiki/States_of_Germany), see [`land`](#land)
+- `regierungsbezirke.ndjson`: [*Regierungsbezirke*](https://en.wikipedia.org/wiki/Regierungsbezirk), see [`regierungsbezirk`](#regierungsbezirk)
+- `regionen.ndjson`: *Regionen* (regions), see [`region`](#region)
+- `kreise.ndjson`: [*Kreise*](https://en.wikipedia.org/wiki/Districts_of_Germany), see [`kreis`](#kreis)
+- `gemeindeverbaende.ndjson`: [*Gemeindeverbände*](https://en.wikipedia.org/wiki/Gemeindeverband), see [`gemeindeverband`](#gemeindeverband)
+- `gemeinden.ndjson`: [*Gemeinden*](https://en.wikipedia.org/wiki/Municipalities_of_Germany), see [`gemeinde`](#gemeinde)
+
+You can also require the module itself to get [readable streams](https://nodejs.org/api/stream.html#stream_class_stream_readable) in [object mode](https://nodejs.org/api/stream.html#stream_object_mode):
 
 ```js
 const gemeindeverzeichnis = require('gemeindeverzeichnis')
 
-gemeindeverzeichnis()
+gemeindeverzeichnis.kreise()
 .on('data', console.log)
 .on('error', console.error)
 ```
-
-The returned `object`s can be of the following types:
-- [`land`](#land)
-- [`regierungsbezirk`](#regierungsbezirk)
-- [`region`](#region)
-- [`kreis`](#kreis)
-- [`gemeindeverband`](#gemeindeverband)
-- [`gemeinde`](#gemeinde)
 
 ### `land`
 
@@ -148,7 +149,7 @@ The returned `object`s can be of the following types:
 	typ: { // type
 		nummer: 50,
 		name: 'verbandsfreie-gemeinde'
-		
+
 		// 50: 'verbandsfreie-gemeinde'
 		// 51: 'amt'
 		// 52: 'samtgemeinde'
@@ -217,7 +218,7 @@ The returned `object`s can be of the following types:
 
 ## Build
 
-The module contains a dataset as of `03/17/2017`. To re-generate the dataset or to generate a newer version of it, just move the `.asc` file you downloaded from the [data portal](https://www.govdata.de/web/guest/daten/-/details/gv100_quartalsausgabe) to `build/data.asc` and run `npm run build` in the project root.
+The module contains a dataset as of `2017-03-18`. To re-generate the dataset or to generate a newer version of it, run `npm run build` in the project root.
 
 ## Contributing
 
