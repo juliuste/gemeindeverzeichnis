@@ -47,7 +47,25 @@ const isGemeindePrezelle = (i) => (
  && (i.name === 'Prezelle')
 )
 
-tape('laender()', (t) => {
+tape('gemeindeverzeichnis()', (t) => {
+	t.plan(7)
+	const s = gemeindeverzeichnis()
+
+	t.ok(isStream.readable(s), 'returns stream')
+	s
+	.on('error', t.fail)
+	.on('data', (item) => {
+		if(isLandNRW(item)) t.pass('contains land `NRW`')
+		else if(isRegierungsbezirkMuenster(item)) t.pass('contains `Münster`')
+		else if(isRegionStuttgart(item)) t.pass('contains `Stuttgart`')
+		else if(isKreisGelsenkirchen(item)) t.pass('contains `Gelsenkirchen`')
+		else if(isGemeindeverbandMarl(item)) t.pass('contains `Marl`')
+		else if(isGemeindePrezelle(item)) t.pass('contains `Prezelle`')
+		// todo: check if every item is valid
+	})
+})
+
+tape('gemeindeverzeichnis.laender()', (t) => {
 	t.plan(2)
 	const s = gemeindeverzeichnis.laender()
 
@@ -60,7 +78,7 @@ tape('laender()', (t) => {
 	})
 })
 
-tape('regierungsbezirke()', (t) => {
+tape('gemeindeverzeichnis.regierungsbezirke()', (t) => {
 	t.plan(2)
 	const s = gemeindeverzeichnis.regierungsbezirke()
 
@@ -73,7 +91,7 @@ tape('regierungsbezirke()', (t) => {
 	})
 })
 
-tape('regionen()', (t) => {
+tape('gemeindeverzeichnis.regionen()', (t) => {
 	t.plan(2)
 	const s = gemeindeverzeichnis.regionen()
 
@@ -86,7 +104,7 @@ tape('regionen()', (t) => {
 	})
 })
 
-tape('kreise()', (t) => {
+tape('gemeindeverzeichnis.kreise()', (t) => {
 	t.plan(2)
 	const s = gemeindeverzeichnis.kreise()
 
@@ -99,7 +117,7 @@ tape('kreise()', (t) => {
 	})
 })
 
-tape('gemeindeverbaende()', (t) => {
+tape('gemeindeverzeichnis.gemeindeverbaende()', (t) => {
 	t.plan(2)
 	const s = gemeindeverzeichnis.gemeindeverbaende()
 
@@ -112,7 +130,7 @@ tape('gemeindeverbaende()', (t) => {
 	})
 })
 
-tape('gemeinden()', (t) => {
+tape('gemeindeverzeichnis.gemeinden()', (t) => {
 	t.plan(2)
 	const s = gemeindeverzeichnis.gemeinden()
 
