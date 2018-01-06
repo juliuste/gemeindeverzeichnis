@@ -47,7 +47,7 @@
   },
   "scripts": {
     "test": "node test.js",
-    "prepublish": "npm test",
+    "prepare": "npm test",
     "download": "./build/download.js",
     "unzip": "unzip -o -j build/data.zip -d build/data",
     "convert": "node build/index.js",
