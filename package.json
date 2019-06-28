@@ -32,7 +32,7 @@
     "regionen.ndjson"
   ],
   "dependencies": {
-    "multistream": "^2.1.0",
+    "multistream": "^3.0.0",
     "ndjson": "^1.5.0"
   },
   "devDependencies": {
