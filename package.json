@@ -37,7 +37,7 @@
   },
   "devDependencies": {
     "byline": "^5.0.0",
-    "got": "^9.0.0",
+    "got": "^10.1.0",
     "iconv": "^2.2.1",
     "is-stream": "^1.1.0",
     "moment-timezone": "^0.5.11",
